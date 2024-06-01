@@ -13,4 +13,19 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.error("Error fetching JSON data:", error);
         });
+
+        const jsonData = {
+            "employee": {
+                "name": "sonoo",
+                "salary": 56000,
+                "married": true
+            }
+        };
+        const nameElement = document.getElementById("name");
+    const salaryElement = document.getElementById("salary");
+    const marriedElement = document.getElementById("married");
+
+    nameElement.textContent = jsonData.employee.name;
+    salaryElement.textContent = "Salary: $" + jsonData.employee.salary;
+    marriedElement.textContent = "Married: " + (jsonData.employee.married ? "Yes" : "No");
 });
